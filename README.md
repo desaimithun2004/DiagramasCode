@@ -51,6 +51,6 @@ python DiagramasCode.py
 
 ![GCP architecture][gcp-datapipeline]
 
-[gcp-datapipeline]: https://github.com/desaimithun2004/DiagramasCode/blob/main/data_pipeline.png
+[gcp-datapipeline]: https://github.com/desaimithun2004/DiagramasCode/blob/main/data_pipeline_example_using_diagram_as_code.png
 
 
