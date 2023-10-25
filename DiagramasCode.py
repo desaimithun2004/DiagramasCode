@@ -11,7 +11,7 @@ from diagrams.onprem.analytics import Powerbi
 with Diagram("Data Pipeline Example using Diagram as Code", show=False):
 
     with Cluster("Source of Data"):
-        postgresql = Postgresql("Transactional Database")
+        postgresql = Postgresql("Database")
         csv = Custom("CSV Files", "./Images/csv.png")
         json = Custom("Json Files", "./Images/json.png")
 
@@ -29,14 +29,14 @@ with Diagram("Data Pipeline Example using Diagram as Code", show=False):
         airflow = Composer("Airflow")
 
         with Cluster("Transformation Layer"):
-            dataflow = Dataflow("data flow")
+            dataflow = Dataflow("Data Flow")
             dataproc = Dataproc("Dataproc Cluster")
 
         functions >> dataflow
         functions >> dataproc
 
         with Cluster("Curated Layer"):
-            bigquery = BigQuery("bq")
+            bigquery = BigQuery("Bigquery")
 
     dataflow >> bigquery
 
