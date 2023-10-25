@@ -23,3 +23,34 @@ choco install graphviz
 $ pip install diagrams
 ```
 
+## Quick Start
+
+```python
+# diagram.py
+
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("aws basic", show=False):
+    ELB("lb") >> EC2("web") >> RDS("db")
+```
+
+Run python diagram.py -> It will generate below diagram
+
+![alt text][sample]
+
+[sample]: https://github.com/desaimithun2004/DiagramasCode/blob/main/Images/sample.png
+
+## Lets use this to generate data pipeline on GCP
+
+```python
+python DiagramasCode.py
+```
+
+![GCP architecture][gcp-datapipeline]
+
+[gcp-datapipeline]: https://github.com/desaimithun2004/DiagramasCode/blob/main/data_pipeline.png
+
+
